@@ -1,0 +1,12 @@
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="https://img1.freepng.es/20180417/irq/kisspng-firebase-cloud-messaging-computer-icons-google-clo-github-5ad5d3cde70706.9853526815239628299463.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+      Labsoft
+    </a>
+    <a class="navbar-brand" href="#" *ngIf="userLogged|async as user">
+        <img style="border-radius: 100%;" src="{{user.photoURL}}" *ngIf="user.photoURL" width="30" height="30" class="d-inline-block align-top" alt="">
+        {{user.email}}
+        <div style="background-color: #C00505" class="btn btn-info btn-block m-2" (click)="logout()" >Logout</div>
+      </a>
+  </nav>
